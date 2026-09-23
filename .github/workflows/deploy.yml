@@ -12,5 +12,4 @@ jobs:
     steps:
       - name: Pull latest changes in PROD
         run: |
-          cd /d "C:\Users\24-019107\Desktop\CD\PROD"
           git pull origin main
