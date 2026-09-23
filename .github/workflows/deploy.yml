@@ -1,0 +1,16 @@
+name: Auto Deploy to PROD
+
+on:
+  push:
+    branches:
+      - main # Пайплайн сработает при пуше в ветку main
+
+jobs:
+  deploy:
+    runs-on: self-hosted # Запуск на вашем локальном ПК, а не на серверах GitHub
+    
+    steps:
+      - name: Pull latest changes in PROD
+        run: |
+          cd /d "C:\Users\24-019107\Desktop\CD\PROD"
+          git pull origin main
